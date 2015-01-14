@@ -45,8 +45,6 @@ Slideshow
         ,   moveX               =   (scope.full)?context.width:scope.$slideshow.width()
         ,   $next               =   $ref.find('.slide').eq(next)
         ,   $current            =   $ref.find('.slide').eq(current)
-        ,   $nextPanel          =   $panels.eq(next)
-        ,   $currentPanel       =   $panels.eq(current)
         ,   timeline            =   new TimelineLite({
                 paused : true
             })
@@ -88,9 +86,7 @@ Slideshow
             timeline.add(
                 [
                     TweenLite.fromTo($current,duration ,{ x : 0 },{ x : endCurrent/1.8 , ease : Expo.easeInOut, force3D:true }),
-                    TweenLite.fromTo($currentPanel,duration ,{ clip : 'rect(0px, 310px, 120px, 0px)' },{ clip : 'rect(0px, 310px, 120px, 310px)' , ease : Expo.easeInOut, force3D:true }),
-                    TweenLite.fromTo($next,duration,{ x : startNext },{ x : 0 , ease : Expo.easeInOut, force3D:true }),
-                    TweenLite.fromTo($nextPanel,duration,{ clip : 'rect(0px, 0px, 120px, 0px)' },{ clip : 'rect(0px, 310px, 120px, 0px)' , ease : Expo.easeInOut, force3D:true })
+                    TweenLite.fromTo($next,duration,{ x : startNext },{ x : 0 , ease : Expo.easeInOut, force3D:true })
                 ]
             );
 
