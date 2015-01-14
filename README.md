@@ -1,0 +1,2 @@
+# js-slideshow
+Slideshow
