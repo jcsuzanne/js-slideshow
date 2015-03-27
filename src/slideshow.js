@@ -129,16 +129,6 @@
                 this.items.eq(this.currentIndex).css({
                     'z-index':1
                 }).removeClass('disabled').addClass('enabled');
-                this.items.each(function() {
-                    if($(this).hasClass('enabled'))
-                    {
-                        $(this).addClass('dp-b')
-                    }
-                    else
-                    {
-                        $(this).addClass('dp-no')
-                    }
-                })
             }
             ,
             updateInfo : function()

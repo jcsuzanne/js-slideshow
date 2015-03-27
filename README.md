@@ -76,10 +76,6 @@ Slideshow
                         .removeClass('disabled')
                         .addClass('enabled')
                     ;
-                    $nextPanel
-                        .removeClass('disabled')
-                        .addClass('enabled')
-                    ;
                     scope.updateInfo();
                 }
             );
